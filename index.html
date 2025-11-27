@@ -4,9 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Hướng dẫn sử dụng K-UTILS PRO v2.1</title>
+    <meta name="description" content="Add-in Excel miễn phí hỗ trợ Kế toán: Đọc số thành chữ, Tỷ giá VCB, Tra cứu MST, Gộp file, Gửi Email lương hàng loạt.">
+    
+    <link rel="icon" href="thumbnail.png" type="image/x-icon">
+    <link rel="shortcut icon" href="thumbnail.png" type="image/x-icon">
+
+    <meta property="og:title" content="K-UTILS PRO v2.1 - Trợ lý Excel đắc lực">
+    <meta property="og:description" content="Tải ngay Add-in Excel: Đọc số tiền, Check MST, Tỷ giá, Email lương... Hoàn toàn miễn phí!">
+    <meta property="og:image" content="logo.png"> <meta property="og:url" content="https://kutils-pro.netlify.app">
+    <meta property="og:type" content="website">
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --primary: #2563eb;
@@ -35,6 +47,8 @@
 
         .sidebar { width: var(--sidebar-width); background-color: var(--bg-card); border-right: 1px solid var(--border); position: fixed; height: 100vh; overflow-y: auto; padding: 20px; z-index: 100; transition: transform 0.3s; }
         .logo { font-size: 24px; font-weight: 800; color: var(--primary); margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
+        .logo img { height: 32px; width: auto; } /* Style cho logo image */
+        
         .nav-menu { list-style: none; }
         .nav-item { margin-bottom: 5px; }
         .nav-link { display: flex; align-items: center; gap: 10px; padding: 10px 15px; color: var(--text-muted); text-decoration: none; border-radius: 8px; font-weight: 500; transition: all 0.2s; }
@@ -90,7 +104,12 @@
     </div>
 
     <aside class="sidebar">
-        <div class="logo"><i class="fas fa-layer-group"></i> K-UTILS PRO</div>
+        <div class="logo">
+            <img src="thumbnail.png" alt="Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+            <i class="fas fa-layer-group" style="display:none;"></i> 
+            K-UTILS PRO
+        </div>
+        
         <ul class="nav-menu">
             <li><a href="#intro" class="nav-link active"><i class="fas fa-home"></i> <span class="lang-vi">Giới thiệu</span><span class="lang-en">Intro</span></a></li>
             <li><a href="#download" class="nav-link" style="color: var(--primary); font-weight: 600;"><i class="fas fa-cloud-download-alt"></i> <span class="lang-vi">Tải bộ cài</span><span class="lang-en">Download</span></a></li>
@@ -106,7 +125,7 @@
         <section id="intro">
             <h1>K-Utils PRO v2.1.0 <span class="badge">New</span></h1>
             <div class="lang-vi">
-                <p>Phiên bản nâng cấp mạnh mẽ với tính năng Tự động cập nhật, hàm Regex xử lý văn bản và cải thiện tốc độ kết nối.</p>
+                <p>Add-in Excel toàn diện dành cho Kế toán, Hành chính và Nhân sự. Tự động hóa các tác vụ lặp lại, tiết kiệm hàng giờ làm việc mỗi ngày.</p>
                 <div style="background: rgba(37,99,235,0.1); border-left: 4px solid #2563eb; padding: 15px; border-radius: 4px; margin-top: 20px;">
                     <i class="fas fa-info-circle"></i> <strong>Mới trong v2.1:</strong>
                     <ul>
@@ -117,7 +136,7 @@
                 </div>
             </div>
             <div class="lang-en">
-                <p>Major update with Auto-update feature, Regex functions, and connection improvements.</p>
+                <p>Comprehensive Excel Add-in for Accountants, Admin, and HR. Automate repetitive tasks and save hours of work every day.</p>
                 <div style="background: rgba(37,99,235,0.1); border-left: 4px solid #2563eb; padding: 15px; border-radius: 4px; margin-top: 20px;">
                     <i class="fas fa-info-circle"></i> <strong>New in v2.1:</strong>
                     <ul>
@@ -138,6 +157,11 @@
                 <a href="https://drive.google.com/drive/folders/1xHwO7JacMJNvxg8jLfyOdrzhVvDKQKA8" target="_blank" class="download-btn">
                     <i class="fab fa-google-drive"></i> <span class="lang-vi">Tải Ngay</span><span class="lang-en">Download Now</span>
                 </a>
+                <p style="margin-top: 15px; font-size: 13px; color: var(--text-muted);">
+                    <i class="fas fa-shield-alt"></i> 
+                    <span class="lang-vi">Đã quét virus - Tương thích Excel 2010 - 365 (64-bit)</span>
+                    <span class="lang-en">Virus Scanned - Compatible with Excel 2010 - 365 (64-bit)</span>
+                </p>
             </div>
         </section>
 
@@ -177,7 +201,7 @@
 
         <section id="email">
             <h2><i class="fas fa-envelope"></i> <span class="lang-vi">3. Email Marketing</span><span class="lang-en">3. Email Marketing</span></h2>
-            <p class="lang-vi">Gửi Email hàng loạt qua Outlook với file đính kèm riêng biệt cho từng người.</p>
+            <p class="lang-vi">Gửi Email hàng loạt qua Outlook với file đính kèm riêng biệt cho từng người. (Xem chi tiết cấu trúc bảng trong phần mềm)</p>
             <p class="lang-en">Send bulk emails via Outlook with individual attachments.</p>
         </section>
 
@@ -212,6 +236,9 @@
                     <div style="margin-top: 15px; font-size: 13px; color: #999;">Account Name:</div>
                     <div class="account-name">TRAN TUAN KHOA</div>
                 </div>
+                <p style="margin-top: 20px; font-size: 14px; color: var(--text-muted);">
+                    <i class="fas fa-heart" style="color: #e11d48;"></i> <span class="lang-vi">Cảm ơn bạn rất nhiều!</span><span class="lang-en">Thank you very much!</span>
+                </p>
             </div>
         </section>
 
