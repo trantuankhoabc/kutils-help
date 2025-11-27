@@ -2,10 +2,11 @@ let currentLang = 'vi';
 const sidebar = document.getElementById('sidebar');
 const body = document.body;
 
-// --- Dữ liệu ngôn ngữ (Đã cập nhật) ---
+// --- Dữ liệu ngôn ngữ (Giữ nguyên) ---
 const langData = {
     'vi': {
         title: "Hướng dẫn sử dụng K-UTILS PRO v2.3",
+        // Đã xóa searchInputPlaceholder
         zaloLinkText: "Gửi phản hồi qua Zalo",
         nav: [
             { href: "#intro", icon: "fas fa-home", text: "Tổng quan", group: false },
@@ -170,9 +171,6 @@ const langData = {
             </ol>
 
             <h3>Chuyển mã Font (TCVN3 -> Unicode)</h3>
-            <div class="alert-danger">
-                <strong><i class="fas fa-exclamation-circle"></i> Cảnh báo:</strong> Tính năng này đôi khi không hoàn hảo 100%. Vui lòng **SAO LƯU FILE GỐC** trước khi thực hiện chuyển mã!
-            </div>
             <p>Sửa lỗi font chữ bị loằng ngoằng (dạng .VnTime) khi mở file cũ.</p>
             <ul>
                 <li>Bôi đen vùng lỗi font.</li>
@@ -236,10 +234,10 @@ const langData = {
             </div>
         `,
         footer_content: `&copy; 2025 K-Utils PRO. Developed by Tran Tuan Khoa.`,
-        toast_copied: "Đã sao chép số tài khoản!",
     },
     'en': {
         title: "K-UTILS PRO v2.3 User Manual",
+        // Đã xóa searchInputPlaceholder
         zaloLinkText: "Send Feedback via Zalo",
         nav: [
             { href: "#intro", icon: "fas fa-home", text: "Overview", group: false },
@@ -285,7 +283,7 @@ const langData = {
                 <li>Check the box for <strong>K-Utils PRO</strong> > OK.</li>
             </ol>
 
-            <h4>Method 2: Unblock the file (If Method 1 fails)</h4>
+            <h4>Cách 2: Unblock file (If Method 1 fails)</h4>
             <ol>
                 <li>Access the installation folder: <code>%AppData%\\Microsoft\\AddIns\\</code></li>
                 <li>Right-click the file <code>KUtils_Pro.xlam</code> > Select <strong>Properties</strong>.</li>
@@ -384,29 +382,26 @@ const langData = {
                 <li>The software will automatically open each file and copy the data into the current file.</li>
             </ul>
 
-            <h3>Hàm RegEx (Tách dữ liệu khó)</h3>
-            <p>Dùng để lấy số điện thoại hoặc Email từ chuỗi văn bản lộn xộn.</p>
+            <h3>RegEx Function (Extracting Difficult Data)</h3>
+            <p>Used to extract phone numbers or emails from messy text strings.</p>
             <ul>
-                <li>Lấy số: <code>=RegExExtract(A1, "\\d+")</code></li>
-                <li>Lấy Email: <code>=RegExExtract(A1, "[a-zA-Z0-9._-]+@[a-z]+\\.[a-z]+")</code></li>
+                <li>Extract Number: <code>=RegExExtract(A1, "\\d+")</code></li>
+                <li>Extract Email: <code>=RegExExtract(A1, "[a-zA-Z0-9._-]+@[a-z]+\\.[a-z]+")</code></li>
             </ul>
         `,
         advanced_content: `
-            <h2><i class="fas fa-magic"></i> 4. Tính năng Nâng cao (v2.3)</h2>
+            <h2><i class="fas fa-magic"></i> 4. Advanced Features (v2.3)</h2>
             
-            <h3>Tách File (Split Workbook)</h3>
-            <p>Chia nhỏ 1 sheet lớn thành nhiều file con dựa trên cột (Ví dụ: Tách lương theo Phòng ban).</p>
+            <h3>Split Workbook</h3>
+            <p>Split a large sheet into multiple child files based on a column (E.g., Split salaries by Department).</p>
             <ol>
-                <li>Bấm <strong>Tách File</strong>.</li>
-                <li>Bước 1: Quét chọn toàn bộ bảng dữ liệu.</li>
-                <li>Bước 2: Chọn 1 ô trong cột muốn tách (VD: Cột Phòng ban).</li>
-                <li>Kết quả: Các file con sẽ được tạo trong thư mục mới.</li>
+                <li>Click <strong>Split File</strong>.</li>
+                <li>Step 1: Select the entire data table.</li>
+                <li>Step 2: Select a cell in the column you want to split by (E.g.: Department Column).</li>
+                <li>Kết quả: Child files will be created in a new folder.</li>
             </ol>
 
-            <h3>Chuyển mã Font (TCVN3 -> Unicode)</h3>
-            <div class="alert-danger">
-                <strong><i class="fas fa-exclamation-circle"></i> Warning:</strong> This feature may not be 100% perfect. Please **BACK UP THE ORIGINAL FILE** before converting the font code!
-            </div>
+            <h3>Font Code Conversion (TCVN3 -> Unicode)</h3>
             <p>Fix messy font errors (like .VnTime) when opening old files.</p>
             <ul>
                 <li>Select the region with font errors.</li>
@@ -414,28 +409,28 @@ const langData = {
             </ul>
         `,
         utils_content: `
-            <h2><i class="fas fa-tools"></i> 5. Tiện ích khác</h2>
+            <h2><i class="fas fa-tools"></i> 5. Other Utilities</h2>
             
             <div class="feature-grid">
                 <div class="feature-card">
                     <i class="fas fa-qrcode feature-icon"></i>
-                    <strong>Tạo QR Code</strong>
-                    <p style="font-size:13px; margin-top:5px;">Chọn ô chứa link/text > Bấm nút Tạo QR. Mã QR sẽ được chèn ngay bên cạnh.</p>
+                    <strong>Generate QR Code</strong>
+                    <p style="font-size:13px; margin-top:5px;">Select cell with link/text > Click the Generate QR button. The QR Code will be inserted next to it.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-list feature-icon"></i>
-                    <strong>Tạo Mục Lục</strong>
-                    <p style="font-size:13px; margin-top:5px;">Tự động tạo sheet "Muc Luc" chứa đường dẫn (Link) đến tất cả các sheet khác trong file.</p>
+                    <strong>Create Table of Contents</strong>
+                    <p style="font-size:13px; margin-top:5px;">Automatically create a "Table of Contents" sheet with links to all other sheets in the file.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-eye feature-icon"></i>
-                    <strong>Hiện Sheet Ẩn</strong>
-                    <p style="font-size:13px; margin-top:5px;">Excel mặc định chỉ cho Unhide từng sheet. Nút này giúp hiện tất cả cùng lúc.</p>
+                    <strong>Unhide All Sheets</strong>
+                    <p style="font-size:13px; margin-top:5px;">Excel only allows unhiding one sheet at a time by default. This button unhides all at once.</p>
                 </div>
                 <div class="feature-card">
                     <i class="fas fa-calendar-alt feature-icon"></i>
-                    <strong>Sửa Lỗi Ngày</strong>
-                    <p style="font-size:13px; margin-top:5px;">Chuyển ngày dạng text (26.11.2023) thành dạng Date chuẩn để tính toán.</p>
+                    <strong>Fix Date Errors</strong>
+                    <p style="font-size:13px; margin-top:5px;">Convert text dates (26.11.2023) into standard Date format for calculations.</p>
                 </div>
             </div>
         `,
@@ -470,9 +465,7 @@ const langData = {
             </div>
         `,
         footer_content: `&copy; 2025 K-Utils PRO. Developed by Tran Tuan Khoa.`,
-        toast_copied: "Account number copied!",
-    },
-    toast_copied: "Đã sao chép số tài khoản!",
+    }
 };
 
 
@@ -482,8 +475,8 @@ function updateContent(lang) {
     
     // 1. Cập nhật Title và Text đơn
     document.getElementById('doc-title').innerText = data.title;
+    // document.getElementById('searchInput').placeholder = data.searchInputPlaceholder; // Đã xóa
     document.getElementById('zalo-link-text').innerText = data.zaloLinkText;
-    document.getElementById('toast').innerText = data.toast_copied;
     
     // 2. Cập nhật Menu Sidebar
     const navMenu = document.getElementById('nav-menu');
@@ -500,11 +493,8 @@ function updateContent(lang) {
             link.href = item.href;
             link.className = item.accent ? 'nav-link accent' : 'nav-link';
             link.innerHTML = `<i class="${item.icon}"></i> ${item.text}`;
-            link.onclick = function(e) {
-                // Xử lý Highlight Section và đóng sidebar
-                e.preventDefault(); 
-                scrollToSection(item.href);
-                if (window.innerWidth <= 768) toggleSidebar(); 
+            link.onclick = function() {
+                if (window.innerWidth <= 768) toggleSidebar(); // Đóng sidebar sau khi click trên mobile
             };
             li.appendChild(link);
             navMenu.appendChild(li);
@@ -523,7 +513,10 @@ function updateContent(lang) {
     document.getElementById('donate-content').innerHTML = data.donate_content;
     document.getElementById('footer-content').innerHTML = data.footer_content;
     
+    // Cập nhật trạng thái Active Link sau khi load nội dung mới
     updateActiveLink(); 
+    
+    // Lưu trạng thái ngôn ngữ vào LocalStorage
     localStorage.setItem('kutils_lang', lang);
 }
 
@@ -543,28 +536,16 @@ function toggleTheme() {
         localStorage.setItem('kutils_theme', 'light');
     } else {
         body.setAttribute('data-theme', 'dark');
-        icon.className = 'fas fa-sun'; 
+        icon.className = 'fas fa-sun'; // Thay icon khi ở dark mode
         localStorage.setItem('kutils_theme', 'dark');
     }
 }
 
-// --- NÂNG CẤP UX: Hàm hiển thị Toast Notification ---
-function showToast(message) {
-    const toast = document.getElementById('toast');
-    toast.innerText = message || langData[currentLang].toast_copied;
-    toast.classList.add('show');
-    setTimeout(function(){ toast.classList.remove('show'); }, 3000);
-}
-
-
-// --- NÂNG CẤP UX: Hàm sao chép và hiển thị Toast ---
+// --- Hàm sao chép & Back to Top ---
 function copyToClipboard() {
     const accNum = document.getElementById('accNum').innerText.replace(/\s/g, ''); 
     const btn = document.querySelector('.copy-btn');
     navigator.clipboard.writeText(accNum).then(() => {
-        // 1. Hiển thị Toast
-        showToast();
-        // 2. Thay đổi icon trên nút
         btn.innerHTML = '<i class="fas fa-check"></i>';
         setTimeout(() => { btn.innerHTML = '<i class="far fa-copy"></i>'; }, 2000);
     });
@@ -575,30 +556,12 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0;
 }
 
-// --- NÂNG CẤP UX: Cuộn đến Section và Highlight ---
-function scrollToSection(href) {
-    const targetId = href.substring(1);
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-        // Cuộn đến phần tử
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-
-        // Thêm hiệu ứng Highlight
-        targetElement.classList.remove('section-highlight'); // Reset animation
-        // Cần setTimeout nhỏ để đảm bảo animation được kích hoạt lại
-        setTimeout(() => {
-            targetElement.classList.add('section-highlight');
-        }, 50); 
-    }
-}
-
 // --- Mobile Sidebar Toggle ---
 function toggleSidebar() {
     sidebar.classList.toggle('open');
 }
 
-// --- Logic Active Link và Back to Top visibility (Giữ nguyên) ---
+// --- Logic Active Link và Back to Top visibility ---
 function updateActiveLink() {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -607,6 +570,7 @@ function updateActiveLink() {
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 150; 
+        // Logic đơn giản hóa vì không còn tìm kiếm và ẩn/hiện section
         if (scrollY >= sectionTop) current = section.getAttribute('id');
     });
     
