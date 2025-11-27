@@ -5,16 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Hướng dẫn sử dụng K-UTILS PRO v2.1</title>
-    <meta name="description" content="Add-in Excel miễn phí hỗ trợ Kế toán: Đọc số thành chữ, Tỷ giá VCB, Tra cứu MST, Gộp file, Gửi Email lương hàng loạt.">
+    <title>Hướng dẫn sử dụng K-UTILS PRO v2.2</title>
+    <meta name="description" content="Add-in Excel miễn phí: Đọc số thành chữ, Tỷ giá VCB, Tra cứu MST, Gộp file, Gửi Email lương.">
     
     <link rel="icon" href="setup_icon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="setup_icon.ico" type="image/x-icon">
-
-    <meta property="og:title" content="K-UTILS PRO v2.1 - Trợ lý Excel đắc lực">
-    <meta property="og:description" content="Tải ngay Add-in Excel: Đọc số tiền, Check MST, Tỷ giá, Email lương... Hoàn toàn miễn phí!">
-    <meta property="og:url" content="https://kutils-pro.netlify.app">
-    <meta property="og:type" content="website">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -43,13 +38,13 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); color: var(--text-main); line-height: 1.6; display: flex; min-height: 100vh; transition: background 0.3s, color 0.3s; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); color: var(--text-main); line-height: 1.6; display: flex; min-height: 100vh; transition: background 0.3s; }
 
+        /* SIDEBAR */
         .sidebar { width: var(--sidebar-width); background-color: var(--bg-card); border-right: 1px solid var(--border); position: fixed; height: 100vh; overflow-y: auto; padding: 20px; z-index: 100; transition: transform 0.3s; }
         
-        /* CSS CHO LOGO CU (ICON + TEXT) */
+        /* LOGO STYLE CU (Dep & Don gian) */
         .logo { font-size: 24px; font-weight: 800; color: var(--primary); margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
-        /* Da xoa CSS .logo img */
         
         .nav-menu { list-style: none; }
         .nav-item { margin-bottom: 5px; }
@@ -57,6 +52,7 @@
         .nav-link:hover, .nav-link.active { background-color: rgba(37, 99, 235, 0.1); color: var(--primary); }
         .nav-link i { width: 20px; text-align: center; }
 
+        /* MAIN CONTENT */
         .main-content { margin-left: var(--sidebar-width); flex: 1; padding: 40px; max-width: 1200px; }
         section { margin-bottom: 60px; scroll-margin-top: 80px; }
         h1 { font-size: 32px; margin-bottom: 15px; color: var(--text-main); }
@@ -116,33 +112,32 @@
             <li><a href="#finance" class="nav-link"><i class="fas fa-coins"></i> <span class="lang-vi">Tài chính</span><span class="lang-en">Finance</span></a></li>
             <li><a href="#data" class="nav-link"><i class="fas fa-database"></i> <span class="lang-vi">Xử lý Dữ liệu</span><span class="lang-en">Data Tools</span></a></li>
             <li><a href="#email" class="nav-link"><i class="fas fa-envelope"></i> <span class="lang-vi">Email Marketing</span><span class="lang-en">Email</span></a></li>
-            <li><a href="#tools" class="nav-link"><i class="fas fa-tools"></i> <span class="lang-vi">Tiện ích khác</span><span class="lang-en">Others</span></a></li>
             <li><a href="#donate" class="nav-link"><i class="fas fa-coffee"></i> <span class="lang-vi">Mời Cafe</span><span class="lang-en">Donate</span></a></li>
         </ul>
     </aside>
 
     <main class="main-content">
         <section id="intro">
-            <h1>K-Utils PRO v2.1.0 <span class="badge">New</span></h1>
+            <h1>K-Utils PRO v2.2.0 <span class="badge">New</span></h1>
             <div class="lang-vi">
                 <p>Add-in Excel toàn diện dành cho Kế toán, Hành chính và Nhân sự. Tự động hóa các tác vụ lặp lại, tiết kiệm hàng giờ làm việc mỗi ngày.</p>
                 <div style="background: rgba(37,99,235,0.1); border-left: 4px solid #2563eb; padding: 15px; border-radius: 4px; margin-top: 20px;">
-                    <i class="fas fa-info-circle"></i> <strong>Mới trong v2.1:</strong>
+                    <i class="fas fa-info-circle"></i> <strong>Tính năng mới trong v2.2:</strong>
                     <ul>
-                        <li>Hàm <code>RegExExtract</code> tách Email, SĐT.</li>
-                        <li>Tự động kiểm tra cập nhật phiên bản mới.</li>
-                        <li>Fix lỗi kết nối Vietcombank.</li>
+                        <li>Tùy chỉnh giọng đọc số (Miền Bắc/Nam, Viết hoa).</li>
+                        <li>Hàm đọc ngoại tệ bất kỳ (Yên, Euro, Tệ...).</li>
+                        <li>Tự động kiểm tra cập nhật & Fix lỗi kết nối.</li>
                     </ul>
                 </div>
             </div>
             <div class="lang-en">
-                <p>Comprehensive Excel Add-in for Accountants, Admin, and HR. Automate repetitive tasks and save hours of work every day.</p>
+                <p>Comprehensive Excel Add-in for Accountants. Version 2.2 introduces advanced number-to-text features.</p>
                 <div style="background: rgba(37,99,235,0.1); border-left: 4px solid #2563eb; padding: 15px; border-radius: 4px; margin-top: 20px;">
-                    <i class="fas fa-info-circle"></i> <strong>New in v2.1:</strong>
+                    <i class="fas fa-info-circle"></i> <strong>New in v2.2:</strong>
                     <ul>
-                        <li><code>RegExExtract</code> function for Email/Phone parsing.</li>
-                        <li>Auto-check for updates.</li>
-                        <li>Fixed Vietcombank connection issues.</li>
+                        <li>Regional options: North/South accents.</li>
+                        <li>Custom currency reading.</li>
+                        <li>Auto-update check & bug fixes.</li>
                     </ul>
                 </div>
             </div>
@@ -151,33 +146,47 @@
         <section id="download">
             <h2><i class="fas fa-cloud-download-alt"></i> <span class="lang-vi">Tải về</span><span class="lang-en">Download</span></h2>
             <div class="feature-card" style="text-align: center; border-color: var(--primary);">
-                <h3>K-UTILS PRO Installer v2.1.0</h3>
+                <h3>K-UTILS PRO Installer v2.2.0</h3>
                 <p class="lang-vi">Tải bộ cài đặt (.exe) mới nhất từ Google Drive.</p>
                 <p class="lang-en">Download the latest .exe installer from Google Drive.</p>
                 <a href="https://drive.google.com/drive/folders/1xHwO7JacMJNvxg8jLfyOdrzhVvDKQKA8" target="_blank" class="download-btn">
-                    <i class="fab fa-google-drive"></i> <span class="lang-vi">Tải Ngay</span><span class="lang-en">Download Now</span>
+                    <i class="fab fa-google-drive"></i> <span class="lang-vi">Tải Ngay (Google Drive)</span><span class="lang-en">Download Now</span>
                 </a>
-                <p style="margin-top: 15px; font-size: 13px; color: var(--text-muted);">
-                    <i class="fas fa-shield-alt"></i> 
-                    <span class="lang-vi">Đã quét virus - Tương thích Excel 2010 - 365 (64-bit)</span>
-                    <span class="lang-en">Virus Scanned - Compatible with Excel 2010 - 365 (64-bit)</span>
-                </p>
             </div>
         </section>
 
         <section id="finance">
-            <h2><i class="fas fa-coins"></i> <span class="lang-vi">1. Tài chính & Kế toán</span><span class="lang-en">1. Finance</span></h2>
+            <h2><i class="fas fa-coins"></i> <span class="lang-vi">1. Tài chính (Đọc số nâng cao)</span><span class="lang-en">1. Finance</span></h2>
+            
             <div class="grid-2">
                 <div class="feature-card">
-                    <h3><span class="lang-vi">Đọc số thành chữ</span><span class="lang-en">Number to Text</span></h3>
-                    <p class="lang-vi">Đọc số tiền VND và USD. Phím tắt: <strong>Ctrl+Shift+V</strong>.</p>
-                    <p class="lang-en">Read numbers in VND/USD. Hotkey: <strong>Ctrl+Shift+V</strong>.</p>
-                    <code>=VND(A1)</code>
+                    <h3><i class="fas fa-font"></i> <span class="lang-vi">Hàm VND (Tùy biến)</span><span class="lang-en">VND Function</span></h3>
+                    <p class="lang-vi">Cú pháp: <code>=VND(SoTien, [KieuDoc], [KieuVietHoa])</code></p>
+                    <ul class="lang-vi">
+                        <li><code>=VND(A1)</code> <br>➝ Một trăm nghìn đồng chẵn.</li>
+                        <li><code>=VND(A1, 1)</code> <br>➝ Một trăm <u style="color:red">ngàn</u> đồng chẵn (Miền Nam).</li>
+                        <li><code>=VND(A1, 0, 2)</code> <br>➝ MỘT TRĂM NGHÌN ĐỒNG CHẴN (Viết hoa).</li>
+                    </ul>
+                    <p class="lang-en">Convert numbers to text with Regional and Case options.</p>
                 </div>
+
                 <div class="feature-card">
-                    <h3><span class="lang-vi">Tra cứu MST Online</span><span class="lang-en">Tax Code Lookup</span></h3>
-                    <p class="lang-vi">Lấy thông tin DN từ Tổng cục thuế. Phím tắt: <strong>Ctrl+Shift+M</strong>.</p>
-                    <p class="lang-en">Get Company info from Tax ID. Hotkey: <strong>Ctrl+Shift+M</strong>.</p>
+                    <h3><i class="fas fa-globe"></i> <span class="lang-vi">Hàm DOC_TIEN (Ngoại tệ)</span><span class="lang-en">Any Currency</span></h3>
+                    <p class="lang-vi">Đọc bất kỳ loại tiền nào bạn muốn.</p>
+                    <p><code>=DOC_TIEN(SoTien, "TenTien", "TenLe")</code></p>
+                    <ul>
+                        <li><code>=DOC_TIEN(10.5, "Euro", "xen")</code><br>➝ Mười Euro và năm mươi xen.</li>
+                        <li><code>=DOC_TIEN(500, "Yên", "")</code><br>➝ Năm trăm Yên chẵn.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3><i class="fas fa-search-dollar"></i> <span class="lang-vi">Tra cứu & Tỷ giá</span><span class="lang-en">Lookup & Rate</span></h3>
+                    <p class="lang-vi">Kết nối trực tiếp Server Vietcombank & Tổng cục thuế.</p>
+                    <ul>
+                        <li><strong>Ctrl+Shift+M:</strong> Tra cứu Tên công ty từ MST.</li>
+                        <li><strong>Menu Ribbon:</strong> Lấy tỷ giá bán ra hiện tại.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -186,42 +195,30 @@
             <h2><i class="fas fa-database"></i> <span class="lang-vi">2. Xử lý Dữ liệu</span><span class="lang-en">2. Data Tools</span></h2>
             <div class="grid-2">
                 <div class="feature-card">
-                    <h3><i class="fas fa-magic"></i> <span class="lang-vi">Hàm RegEx (Mới)</span><span class="lang-en">RegEx Function (New)</span></h3>
-                    <p class="lang-vi">Tách dữ liệu khó (Email, SĐT) từ chuỗi văn bản hỗn độn.</p>
-                    <p class="lang-en">Extract Email, Phone from text using Regular Expressions.</p>
+                    <h3><i class="fas fa-magic"></i> <span class="lang-vi">Hàm RegEx (Mới)</span><span class="lang-en">RegEx Function</span></h3>
+                    <p class="lang-vi">Tách dữ liệu khó như Email, SĐT từ chuỗi văn bản hỗn độn.</p>
                     <code>=RegExExtract(A1, "\d+")</code>
                 </div>
                 <div class="feature-card">
                     <h3><i class="fas fa-file-excel"></i> <span class="lang-vi">Gộp File Excel</span><span class="lang-en">Merge Files</span></h3>
-                    <p class="lang-vi">Gom nhiều file Excel vào 1 file duy nhất cực nhanh.</p>
-                    <p class="lang-en">Combine multiple Excel files into one instantly.</p>
+                    <p class="lang-vi">Gom nhiều file Excel trong 1 thư mục vào file hiện tại.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-broom"></i> <span class="lang-vi">Dọn dẹp dữ liệu</span><span class="lang-en">Clean Data</span></h3>
+                    <p class="lang-vi">Xóa khoảng trắng cứng (Char 160) sửa lỗi VLOOKUP #N/A. Chuẩn hóa tên riêng.</p>
                 </div>
             </div>
         </section>
 
         <section id="email">
-            <h2><i class="fas fa-envelope"></i> <span class="lang-vi">3. Email Marketing</span><span class="lang-en">3. Email Marketing</span></h2>
-            <p class="lang-vi">Gửi Email hàng loạt qua Outlook với file đính kèm riêng biệt cho từng người. (Xem chi tiết cấu trúc bảng trong phần mềm)</p>
+            <h2><i class="fas fa-envelope"></i> <span class="lang-vi">3. Email Marketing</span><span class="lang-en">3. Bulk Email</span></h2>
+            <p class="lang-vi">Gửi Email hàng loạt qua Outlook với file đính kèm riêng biệt cho từng người. Rất tiện để gửi Phiếu lương, Thông báo công nợ.</p>
             <p class="lang-en">Send bulk emails via Outlook with individual attachments.</p>
-        </section>
-
-        <section id="tools">
-            <h2><i class="fas fa-tools"></i> <span class="lang-vi">4. Tiện ích khác</span><span class="lang-en">4. Other Tools</span></h2>
-            <div class="grid-2">
-                <div class="feature-card">
-                    <h3><i class="fas fa-sync-alt"></i> <span class="lang-vi">Tự động Cập nhật</span><span class="lang-en">Auto Update</span></h3>
-                    <p class="lang-vi">Tự động kiểm tra phiên bản mới mỗi khi mở Excel.</p>
-                    <p class="lang-en">Automatically check for new versions on startup.</p>
-                </div>
-                <div class="feature-card">
-                    <h3><i class="fas fa-qrcode"></i> QR Code</h3>
-                    <p class="lang-vi">Tạo mã QR nhúng vào ô.</p>
-                    <p class="lang-en">Generate QR codes embedded in cells.</p>
-                </div>
+            <div style="background: var(--bg-card); border:1px solid var(--border); padding:10px; border-radius:8px; font-size:0.9em;">
+                <strong>Cấu trúc bảng (Bôi đen cột Email):</strong><br>
+                [Tên] | [Email] | [Tiêu đề] | [Nội dung] | [Đường dẫn File]
             </div>
         </section>
-
-        <hr style="border:0; border-top: 1px dashed var(--border); margin: 40px 0;">
 
         <section id="donate">
             <div class="donate-wrapper">
@@ -243,7 +240,7 @@
         </section>
 
         <footer style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 14px;">
-            &copy; 2025 K-Utils PRO.
+            &copy; 2025 K-Utils PRO. Developed by Tran Tuan Khoa.
         </footer>
     </main>
 
@@ -256,37 +253,66 @@
                 btn.style.background = '#10b981'; btn.style.color = 'white'; btn.style.borderColor = '#10b981';
                 setTimeout(() => { btn.innerHTML = '<i class="far fa-copy"></i> Copy'; btn.style.background = ''; btn.style.color = ''; btn.style.borderColor = ''; }, 2000);
             };
-            if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(accNum).then(showSuccess).catch(() => fallbackCopy(accNum)); } 
-            else { fallbackCopy(accNum); }
+            // Fallback for non-secure contexts (http/file)
+            if (navigator.clipboard && window.isSecureContext) { 
+                navigator.clipboard.writeText(accNum).then(showSuccess).catch(() => fallbackCopy(accNum)); 
+            } else { 
+                fallbackCopy(accNum); 
+            }
             function fallbackCopy(text) {
-                const ta = document.createElement("textarea"); ta.value = text; ta.style.position = "fixed"; ta.style.left = "-9999px";
-                document.body.appendChild(ta); ta.focus(); ta.select();
-                try { if (document.execCommand('copy')) showSuccess(); else prompt("Ctrl+C:", text); } catch (e) { prompt("Ctrl+C:", text); }
+                const ta = document.createElement("textarea"); 
+                ta.value = text; 
+                ta.style.position = "fixed"; 
+                ta.style.left = "-9999px";
+                document.body.appendChild(ta); 
+                ta.focus(); 
+                ta.select();
+                try { 
+                    if (document.execCommand('copy')) showSuccess(); 
+                    else prompt("Ctrl+C để copy:", text); 
+                } catch (e) { 
+                    prompt("Ctrl+C để copy:", text); 
+                }
                 document.body.removeChild(ta);
             }
         }
+
         function toggleTheme() {
             const b = document.body; const i = document.getElementById('theme-icon');
             if (b.getAttribute('data-theme') === 'dark') { b.removeAttribute('data-theme'); i.className = 'fas fa-moon'; localStorage.setItem('theme', 'light'); }
             else { b.setAttribute('data-theme', 'dark'); i.className = 'fas fa-sun'; localStorage.setItem('theme', 'dark'); }
         }
+
         function toggleLanguage() {
             const t = document.getElementById('lang-text'); const i = document.getElementById('lang-icon');
             const v = document.querySelectorAll('.lang-vi'); const e = document.querySelectorAll('.lang-en');
             let c = localStorage.getItem('lang') || 'vi';
-            if (c === 'vi') { v.forEach(x => x.style.display='none'); e.forEach(x => x.style.display='inline'); t.innerText='VN'; i.innerText='🇻🇳'; localStorage.setItem('lang', 'en'); }
-            else { v.forEach(x => x.style.display='inline'); e.forEach(x => x.style.display='none'); t.innerText='EN'; i.innerText='🇺🇸'; localStorage.setItem('lang', 'vi'); }
+            if (c === 'vi') { 
+                v.forEach(x => x.style.display='none'); e.forEach(x => x.style.display='inline'); 
+                t.innerText='VN'; i.innerText='🇻🇳'; localStorage.setItem('lang', 'en'); 
+            } else { 
+                v.forEach(x => x.style.display='inline'); e.forEach(x => x.style.display='none'); 
+                t.innerText='EN'; i.innerText='🇺🇸'; localStorage.setItem('lang', 'vi'); 
+            }
         }
+
         function applyLanguage(l) {
             const t = document.getElementById('lang-text'); const i = document.getElementById('lang-icon');
             const v = document.querySelectorAll('.lang-vi'); const e = document.querySelectorAll('.lang-en');
-            if (l === 'en') { v.forEach(x => x.style.display='none'); e.forEach(x => x.style.display='inline'); t.innerText='VN'; i.innerText='🇻🇳'; }
-            else { v.forEach(x => x.style.display='inline'); e.forEach(x => x.style.display='none'); t.innerText='EN'; i.innerText='🇺🇸'; }
+            if (l === 'en') { 
+                v.forEach(x => x.style.display='none'); e.forEach(x => x.style.display='inline'); 
+                t.innerText='VN'; i.innerText='🇻🇳'; 
+            } else { 
+                v.forEach(x => x.style.display='inline'); e.forEach(x => x.style.display='none'); 
+                t.innerText='EN'; i.innerText='🇺🇸'; 
+            }
         }
+
         document.addEventListener('DOMContentLoaded', () => {
             if (localStorage.getItem('theme') === 'dark') { document.body.setAttribute('data-theme', 'dark'); document.getElementById('theme-icon').className = 'fas fa-sun'; }
             applyLanguage(localStorage.getItem('lang') || 'vi');
         });
+
         window.addEventListener('scroll', () => {
             const s = document.querySelectorAll('section'); const n = document.querySelectorAll('.nav-link'); let c = '';
             s.forEach(x => { if (pageYOffset >= x.offsetTop - 100) c = x.getAttribute('id'); });
